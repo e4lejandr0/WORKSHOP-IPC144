@@ -18,51 +18,51 @@ user@matrix ~ > git pull
 -----------------------------------------
 #### FAQ
 
-- Is it okay to put 'int i = 0' inside my for loops?
+1. Is it okay to put 'int i = 0' inside my for loops?
 
-Short answer: yes. But your prof may disagree.
+    Short answer: yes. But your prof may disagree.
 
-Long answer: initializer inside the for loops got introduced in C90, previous versions did not allow
-`for(int i = 0; i < size; ++i)` which meant programmers needed to do the following:
+    Long answer: initializer inside the for loops got introduced in C90, previous versions did not allow
+    `for(int i = 0; i < size; ++i)` which meant programmers needed to do the following:
 
-```C
-int i;
-for(i = 0; i < size; ++i)
-```
+    ```C
+    int i;
+    for(i = 0; i < size; ++i)
+    ```
 
-For this reason you may hear some people questioning initializers inside for loops. It's been 28 years 
-since 1990 however and there's no reason to use the old way but old habits die hard.
+    For this reason you may hear some people questioning initializers inside for loops. It's been 28 years 
+    since 1990 however and there's no reason to use the old way but old habits die hard.
 
-- What's the difference of `i++` vs `++i`?
+2. What's the difference of `i++` vs `++i`?
 
-Consider the following:
+    Consider the following:
 
-```C
-int i = 0;
-int j = 0;
-printf("i = %d, j = %d\n", i, j);
-printf("i++ = %d, ++j = %d\n", i++, ++j);
-```
+    ```C
+    int i = 0;
+    int j = 0;
+    printf("i = %d, j = %d\n", i, j);
+    printf("i++ = %d, ++j = %d\n", i++, ++j);
+    ```
 
-The output of the program is:
+    The output of the program is:
 
-```C
-i = 0, j = 0 
-i++ = 0, ++j = 1 // i++ returns i before the increment, ++j returns j after the increment
-```
+    ```C
+    i = 0, j = 0 
+    i++ = 0, ++j = 1 // i++ returns i before the increment, ++j returns j after the increment
+    ```
 
-- Why will my code compile in visual studio but not in matrix?
+3. Why will my code compile in visual studio but not in matrix?
 
-There might be several reasons, the most common one is that you are using features which may not
-be supported in C89 (matrix's compiler defaults to C89). In this case the fix is easy: add `-std=c99`
-to the compiler command line(eg: `g++ -std=c90 file.c -o output`)
+    There might be several reasons, the most common one is that you are using features which may not
+    be supported in C89 (matrix's compiler defaults to C89). In this case the fix is easy: add `-std=c99`
+    to the compiler command line(eg: `g++ -std=c90 file.c -o output`)
 
-- Why will my code compile in matrix but not Visual Studio?
+4. Why will my code compile in matrix but not Visual Studio?
 
-Same as above, there might be several reasons. The most common one is that by default
-Visual Studio marks the `scanf()` function as insecure(Windows provides `scanf_s` which is secure but non-standard).
+    Same as above, there might be several reasons. The most common one is that by default
+    Visual Studio marks the `scanf()` function as insecure(Windows provides `scanf_s` which is secure but non-standard).
 
-How to fix: add `#define _SECURE_CRT_NO_WARNINGS` at the top of your C files.
+    How to fix: add `#define _SECURE_CRT_NO_WARNINGS` at the top of your C files.
 
 
 -----------------------------------------

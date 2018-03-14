@@ -1,4 +1,4 @@
-In order to compile a program made of several c file
+In order to compile a program made of several C files
 we need to pass them to the compiler as:
 
 ```bash

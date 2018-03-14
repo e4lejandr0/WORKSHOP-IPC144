@@ -55,7 +55,7 @@ user@matrix ~ > git pull
 
     There might be several reasons, the most common one is that you are using features which may not
     be supported in C89 (matrix's compiler defaults to C89). In this case the fix is easy: add `-std=c99`
-    to the compiler command line(eg: `g++ -std=c90 file.c -o output`)
+    to the compiler command line(eg: `g++ -std=c99 file.c -o output`)
 
 4. Why will my code compile in matrix but not Visual Studio?
 

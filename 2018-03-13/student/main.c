@@ -13,7 +13,8 @@ int main(void)
                                   { "Alex", 21 },
                                   { "Margaryta", 19 } };
 
-    const int count = sizeof(students)/sizeof(struct student);
+    // const int count = sizeof(students)/sizeof(struct student); <-- calculating the size of the array using sizeof() but don't worry about it too much
+    const int count = 7;
 
     /*! print the students */
     printf("Printing unordered students...\n");

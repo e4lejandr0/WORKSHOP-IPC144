@@ -1,0 +1,2 @@
+Phone,400.000000,Black
+Microwave,100.000000,White

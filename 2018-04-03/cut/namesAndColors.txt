@@ -1,0 +1,2 @@
+Phone	400.00
+Microwave	100.00
